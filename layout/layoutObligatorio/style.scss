@@ -1,0 +1,68 @@
+$base-colors: (
+  1: rgb(214, 80, 80),
+  2: rgb(113, 113, 214),
+  3: rgb(128, 199, 128),
+);
+$base-color-text: (
+  1: rgb(106, 213, 242),
+  2: rgba(214, 167, 59, 0.703),
+  3: rgba(114, 98, 98, 0.897),
+);
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin: 3px;
+  height: 5rem;
+}
+
+@for $j from 3 through 1 {
+  .color-#{$j} {
+    $base-color: map-get($base-colors, $j);
+    .base-color {
+      background-color: $base-color !important;
+      padding: 6px 2rem;
+      .color-box-text {
+        color: white !important;
+      }
+      
+    }
+    @for $i from 4 through 1 {
+      .darken-#{$i} {
+        background-color: darken($base-color, $i * 5%) !important;
+        padding: 6px;
+      }
+
+      .lighten-#{$i} {
+        background-color: lighten($base-color, $i * 5%);
+        padding: 6px;
+        
+      }
+    }
+    .color-box-text {
+      font-size: 1rem;
+      color: map-get($base-color-text, $j);
+    }
+  }
+}
