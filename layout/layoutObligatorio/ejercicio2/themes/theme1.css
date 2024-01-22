@@ -1,0 +1,12 @@
+
+.base {
+    background-color: red;
+}
+
+.important {
+    background-color:rgb(134, 43, 43);
+}
+
+.warning {
+    background-color:rgb(244, 198, 221) ;
+}
