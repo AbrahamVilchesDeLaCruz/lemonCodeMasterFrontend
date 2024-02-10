@@ -1,0 +1,27 @@
+.base {
+  background-color: blue;
+}
+
+.important {
+  background-color: rgb(43, 48, 110);
+}
+
+.warning {
+  background-color: rgb(76, 227, 238);
+}
+
+.principal {
+  font-family: "Times New Roman", serif;
+}
+
+.secondary {
+  font-family: sans-serif;
+}
+
+.shadowBox {
+  box-shadow: 5px 10px 10px 0 rgb(86, 85, 85);
+}
+
+div {
+  border-radius: 5px;
+}

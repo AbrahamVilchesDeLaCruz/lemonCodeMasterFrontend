@@ -1,12 +1,23 @@
-
 .base {
-    background-color: red;
+  background-color: red;
 }
 
 .important {
-    background-color:rgb(134, 43, 43);
+  background-color: rgb(134, 43, 43);
 }
 
 .warning {
-    background-color:rgb(244, 198, 221) ;
+  background-color: rgb(244, 198, 221);
+}
+
+.principal {
+  font-family: Arial;
+}
+
+.secondary {
+  font-family: Geneva, Verdana, sans-serif;
+}
+
+.shadowBox {
+  box-shadow: -5px 10px 10px 0 rgb(86, 85, 85);
 }
