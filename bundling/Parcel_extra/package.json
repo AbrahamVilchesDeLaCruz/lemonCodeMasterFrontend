@@ -1,0 +1,32 @@
+{
+  "name": "parcel_extra",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "run-p -l type-check:watch start:dev",
+    "start:dev": "rimraf dist && parcel",
+    "build": "rimraf dist && parcel build --detailed-report --no-source-maps",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch"
+  },
+  "browserslist": "last 1 version",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.22",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.12.0",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.4.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
