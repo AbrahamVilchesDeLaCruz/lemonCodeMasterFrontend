@@ -7,7 +7,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 export const RickyMortyPage: React.FC = () => {
   const [characters, setCharacters] = useState<any[]>([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const debouncedSearchTerm = useDebounced(searchTerm, 500); 
+  const debouncedSearchTerm = useDebounced(searchTerm, 500);
   const [nextUrl, setNextUrl] = useState<string>("");
   const [prevUrl, setPrevUrl] = useState<string>("");
 
@@ -59,7 +59,15 @@ export const RickyMortyPage: React.FC = () => {
 
   return (
     <>
-      <Typography variant="h2" display="flex" alignItems="center" justifyContent="center" width="100%">Hello from Rick and Morty page</Typography>
+      <Typography
+        variant="h2"
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        width="100%"
+      >
+        Rick and Morty
+      </Typography>
       <Box display="flex" alignItems="center" justifyContent="center" width="100%" mt={2} mb={2}>
         <TextField
           type="text"
@@ -91,9 +99,7 @@ export const RickyMortyPage: React.FC = () => {
         <Button variant="contained" onClick={handlePreviousPage} size="small">
           <ArrowBackIcon />
         </Button>
-        <Typography variant="body1" fontWeight="bold" marginLeft={2} marginRight={2}>
-          {/* Page {parseInt(nextUrl[-1]) - 1 || 1} */}
-        </Typography>
+        <Box mx={1} />
         <Button variant="contained" onClick={handleNextPage} size="small">
           <ArrowForwardIcon />
         </Button>
