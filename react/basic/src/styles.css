@@ -1,0 +1,120 @@
+.list-user-list-container {
+  display: grid;
+  grid-template-columns: 80px 1fr 3fr;
+  grid-template-rows: 20px;
+  grid-auto-rows: 80px;
+  grid-gap: 10px 5px;
+}
+
+.list-header {
+  background-color: #2f4858;
+  color: white;
+  font-weight: bold;
+}
+
+.list-user-list-container > img {
+  width: 80px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  filter: brightness(0.5);
+}
+
+.card-media {
+  height: 400px;
+  transition: 0.3s;
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.card:hover .content {
+  visibility: visible;
+  opacity: 1;
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr)); /* Para mostrar 4 columnas por fila */
+  grid-gap: 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
+  }
+}
+
+.card-rickMorty {
+  position: relative;
+}
+
+.card-rickMorty img {
+  width: 100%;
+  height: 300px;
+}
+
+.info-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: none;
+  text-align: center;
+}
+
+.card-rickMorty:hover .info-overlay {
+  display: block;
+}
