@@ -1,4 +1,4 @@
-export interface Hotel {
+export interface CharacterEntityApi {
   id: string;
   type: string;
   name: string;

@@ -1,7 +1,6 @@
-import { Hotel } from './hotel.api-model';
-import { Lookup } from 'common/models';
+import { CharacterEntityApi } from './character-collection.api-model';
 
-export const mockHotelCollection: Hotel[] = [
+export const mockCharacterCollection: CharacterEntityApi[] = [
   {
     id: '1',
     type: 'hotel',
@@ -81,16 +80,5 @@ export const mockHotelCollection: Hotel[] = [
     tripAdvisorRating: 4.5,
     tripAdvisorRatingUrl:
       'http://www.tripadvisor.com/img/cdsi/img2/ratings/traveler/4.5-12345-4.gif',
-  },
-];
-
-export const mockCities: Lookup[] = [
-  {
-    id: 'Seattle',
-    name: 'Seattle',
-  },
-  {
-    id: 'New York',
-    name: 'New York',
   },
 ];
